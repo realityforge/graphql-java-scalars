@@ -1,7 +1,7 @@
 # graphql-java-scalars: graphql-java scalar implementations
 
 [![Build Status](https://secure.travis-ci.org/realityforge/graphql-java-scalars.svg?branch=master)](http://travis-ci.org/realityforge/graphql-java-scalars)
-[<img src="https://img.shields.io/maven-central/v/org.realityforge.graphql/graphql-java-scalars.svg?label=latest%20release"/>](https://search.maven.org/search?q=g:org.realityforge.graphql%20a:graphql-java-scalars)
+[<img src="https://img.shields.io/maven-central/v/org.realityforge.graphql.scalars/graphql-java-scalars.svg?label=latest%20release"/>](https://search.maven.org/search?q=g:org.realityforge.graphq.scalarsl%20a:graphql-java-scalars)
 
 ## What is graphql-java-scalars?
 
@@ -14,7 +14,7 @@ The Maven dependency is:
 
 ```xml
 <dependency>
-  <groupId>org.realityforge.graphql</groupId>
+  <groupId>org.realityforge.graphql.scalars</groupId>
   <artifactId>graphql-java-scalars</artifactId>
   <version>0.00</version>
 </dependency>

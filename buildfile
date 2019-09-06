@@ -3,7 +3,7 @@ require 'buildr/gpg'
 
 desc 'graphql-java scalar implementations'
 define 'graphql-java-scalars' do
-  project.group = 'org.realityforge.graphql'
+  project.group = 'org.realityforge.graphql.scalars'
   compile.options.source = '1.8'
   compile.options.target = '1.8'
   compile.options.lint = 'all'
