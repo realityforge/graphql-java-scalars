@@ -1,0 +1,12 @@
+repositories:
+  remote:
+   - https://repo.maven.apache.org/maven2
+   - https://stocksoftware.artifactoryonline.com/stocksoftware/public
+   - https://stocksoftware.artifactoryonline.com/stocksoftware/oss
+
+artifacts:
+  idea_codestyle: au.com.stocksoftware.idea.codestyle:idea-codestyle:xml:1.14
+
+  javax_annotation: org.realityforge.javax.annotation:javax.annotation:jar:1.0.0
+
+  graphql_java: com.graphql-java:graphql-java:jar:13.0
