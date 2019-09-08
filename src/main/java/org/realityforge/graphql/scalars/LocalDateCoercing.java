@@ -133,7 +133,7 @@ final class LocalDateCoercing
     {
       try
       {
-        return LocalLocalDate( ( (Number) input ).longValue() );
+        return parseLocalDate( ( (Number) input ).longValue() );
       }
       catch ( final Throwable t )
       {
@@ -184,7 +184,7 @@ final class LocalDateCoercing
       final BigInteger value = ( (IntValue) input ).getValue();
       try
       {
-        return LocalLocalDate( value );
+        return parseLocalDate( value );
       }
       catch ( final Throwable t )
       {
@@ -207,13 +207,13 @@ final class LocalDateCoercing
   }
 
   @Nonnull
-  private LocalDate LocalLocalDate( @Nonnull final BigInteger value )
+  private LocalDate parseLocalDate( @Nonnull final BigInteger value )
   {
-    return LocalLocalDate( value.longValue() );
+    return parseLocalDate( value.longValue() );
   }
 
   @Nonnull
-  private LocalDate LocalLocalDate( final long epochMilli )
+  private LocalDate parseLocalDate( final long epochMilli )
   {
     return LocalDate.from( Instant.ofEpochMilli( epochMilli ) );
   }
