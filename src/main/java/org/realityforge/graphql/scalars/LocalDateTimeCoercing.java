@@ -66,7 +66,7 @@ final class LocalDateTimeCoercing
   }
 
   @Nonnull
-  private String serializeDate( final Date date )
+  private String serializeDate( @Nonnull final Date date )
   {
     return date.toInstant().atZone( ZoneId.systemDefault() ).format( DateTimeFormatter.ISO_LOCAL_DATE_TIME );
   }
