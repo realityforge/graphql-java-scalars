@@ -175,16 +175,7 @@ final class LocalDateCoercing
     }
     else if ( input instanceof IntValue )
     {
-      final BigInteger value = ( (IntValue) input ).getValue();
-      try
-      {
-        return parseLocalDate( value.longValue() );
-      }
-      catch ( final Throwable t )
-      {
-        final String message = "Error parsing literal '" + value + "'. Expected to be in milliseconds since Epoch";
-        throw new CoercingParseLiteralException( message );
-      }
+      return parseLocalDate( ( (IntValue) input ).getValue().longValue() );
     }
     else
     {
