@@ -29,7 +29,7 @@ final class LocalDateCoercing
     }
     else if ( input instanceof Date )
     {
-      return serializeDate( input, (Date) input );
+      return serializeDate( (Date) input );
     }
     else if ( input instanceof String )
     {
@@ -51,16 +51,9 @@ final class LocalDateCoercing
   }
 
   @Nonnull
-  private String serializeDate( @Nonnull final Object input, @Nonnull final Date date )
+  private String serializeDate( @Nonnull final Date date )
   {
-    try
-    {
-      return date.toInstant().atZone( ZoneId.systemDefault() ).format( DateTimeFormatter.ISO_LOCAL_DATE );
-    }
-    catch ( final Exception e )
-    {
-      throw newCoercingSerializeException( input, e );
-    }
+    return date.toInstant().atZone( ZoneId.systemDefault() ).format( DateTimeFormatter.ISO_LOCAL_DATE );
   }
 
   @Nonnull
