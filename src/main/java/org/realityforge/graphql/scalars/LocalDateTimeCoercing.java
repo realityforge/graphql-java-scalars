@@ -107,7 +107,8 @@ final class LocalDateTimeCoercing
     final LocalDateTime date = doParseValue( input );
     if ( isInvalidYear( date ) )
     {
-      final String message = "Date value " + input + " must be between January 1, 1753 and December 31, 9999.";
+      final String message =
+        "LocalDateTime value " + input + " must be between January 1, 1753 and December 31, 9999. Received: " + date;
       throw new CoercingParseValueException( message );
     }
 
