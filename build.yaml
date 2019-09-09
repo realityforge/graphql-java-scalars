@@ -7,6 +7,6 @@ repositories:
 artifacts:
   idea_codestyle: au.com.stocksoftware.idea.codestyle:idea-codestyle:xml:1.14
 
-  javax_annotation: org.realityforge.javax.annotation:javax.annotation:jar:1.0.0
+  javax_annotation: org.realityforge.javax.annotation:javax.annotation:jar:1.0.1
 
   graphql_java: com.graphql-java:graphql-java:jar:13.0
