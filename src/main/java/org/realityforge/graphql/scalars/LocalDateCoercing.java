@@ -216,7 +216,7 @@ final class LocalDateCoercing
   @Nonnull
   private LocalDate parseLocalDate( final long epochMilli )
   {
-    return LocalDate.from( Instant.ofEpochMilli( epochMilli ) );
+    return LocalDate.from( Instant.ofEpochMilli( epochMilli ).atZone( ZoneId.systemDefault() ) );
   }
 
   private static boolean isInvalidYear( @Nonnull final LocalDate date )
