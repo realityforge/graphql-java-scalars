@@ -97,7 +97,7 @@ final class LocalDateTimeCoercing
   private CoercingSerializeException newCoercingSerializeException( @Nonnull final Object input,
                                                                     @Nonnull final Throwable e )
   {
-    return new CoercingSerializeException( "Failed to serialize value " + input + " as a DateTime", e );
+    return new CoercingSerializeException( "Failed to serialize value " + input + " as a LocalDateTime.", e );
   }
 
   @Nonnull
