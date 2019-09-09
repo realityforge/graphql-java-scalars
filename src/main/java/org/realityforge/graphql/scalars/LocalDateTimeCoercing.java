@@ -191,7 +191,7 @@ final class LocalDateTimeCoercing
       catch ( final Throwable t )
       {
         final String message = "Error parsing literal '" + value + "'. Expected to be in milliseconds since Epoch";
-        throw new CoercingParseLiteralException( message );
+        throw new CoercingParseLiteralException( message, t );
       }
     }
     else
