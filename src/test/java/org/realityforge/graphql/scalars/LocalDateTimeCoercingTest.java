@@ -159,6 +159,7 @@ public class LocalDateTimeCoercingTest
     assertEquals( coercing.serialize( LocalDateTime.of( 2011, 12, 3, 23, 59, 59 ) ), "2011-12-03T23:59:59" );
   }
 
+  @SuppressWarnings( "deprecation" )
   @Test
   public void serialize_Date()
   {
