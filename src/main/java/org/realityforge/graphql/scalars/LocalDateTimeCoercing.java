@@ -145,7 +145,7 @@ final class LocalDateTimeCoercing
     }
     else
     {
-      final String message = "Error parsing value " + input + " as it is the incorrect type. " +
+      final String message = "Error parsing literal " + input + " as it is the incorrect type. " +
                              "Expected a string or an integer.";
       throw new CoercingParseValueException( message );
     }
