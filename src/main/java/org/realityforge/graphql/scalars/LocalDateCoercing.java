@@ -177,7 +177,7 @@ final class LocalDateCoercing
       final BigInteger value = ( (IntValue) input ).getValue();
       try
       {
-        return parseLocalDate( value );
+        return parseLocalDate( value.longValue() );
       }
       catch ( final Throwable t )
       {
@@ -197,12 +197,6 @@ final class LocalDateCoercing
   private LocalDate parseLocalDate( @Nonnull final String value )
   {
     return LocalDate.from( DateTimeFormatter.ISO_LOCAL_DATE.parse( value ) );
-  }
-
-  @Nonnull
-  private LocalDate parseLocalDate( @Nonnull final BigInteger value )
-  {
-    return parseLocalDate( value.longValue() );
   }
 
   @Nonnull
