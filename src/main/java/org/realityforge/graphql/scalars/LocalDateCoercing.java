@@ -132,15 +132,7 @@ final class LocalDateCoercing
     }
     else if ( input instanceof Number )
     {
-      try
-      {
-        return parseLocalDate( ( (Number) input ).longValue() );
-      }
-      catch ( final Throwable t )
-      {
-        final String message = "Error parsing literal '" + input + "'. Expected to be in milliseconds since Epoch";
-        throw new CoercingParseValueException( message );
-      }
+      return parseLocalDate( ( (Number) input ).longValue() );
     }
     else
     {
