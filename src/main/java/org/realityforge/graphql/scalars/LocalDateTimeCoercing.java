@@ -127,7 +127,7 @@ final class LocalDateTimeCoercing
       catch ( final Throwable t )
       {
         final String message = "Error parsing value '" + input + "'. Expected to be in the ISO date-time " +
-                               "format with an offset, such as '2011-12-03T10:15:30+01:00'";
+                               "format such as '2011-12-03T10:15:30'";
         throw new CoercingParseValueException( message );
       }
     }
@@ -178,8 +178,8 @@ final class LocalDateTimeCoercing
       catch ( final Throwable t )
       {
         final String message = "Error parsing literal '" + value + "'. Expected to be in the ISO date-time " +
-                               "format with an offset, such as '2011-12-03T10:15:30+01:00'";
-        throw new CoercingParseLiteralException( message );
+                               "format such as '2011-12-03T10:15:30'";
+        throw new CoercingParseLiteralException( message, t );
       }
     }
     else if ( input instanceof IntValue )
