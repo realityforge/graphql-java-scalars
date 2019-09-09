@@ -68,14 +68,7 @@ final class LocalDateTimeCoercing
   @Nonnull
   private String serializeDate( @Nonnull final Object input, final Date date )
   {
-    try
-    {
-      return date.toInstant().atZone( ZoneId.systemDefault() ).format( DateTimeFormatter.ISO_LOCAL_DATE_TIME );
-    }
-    catch ( final Throwable e )
-    {
-      throw newCoercingSerializeException( input, e );
-    }
+    return date.toInstant().atZone( ZoneId.systemDefault() ).format( DateTimeFormatter.ISO_LOCAL_DATE_TIME );
   }
 
   @Nonnull
@@ -133,15 +126,7 @@ final class LocalDateTimeCoercing
     }
     else if ( input instanceof Number )
     {
-      try
-      {
-        return parseLocalDateTime( ( (Number) input ).longValue() );
-      }
-      catch ( final Throwable t )
-      {
-        final String message = "Error parsing literal '" + input + "'. Expected to be in milliseconds since Epoch";
-        throw new CoercingParseValueException( message );
-      }
+      return parseLocalDateTime( ( (Number) input ).longValue() );
     }
     else
     {
@@ -185,16 +170,7 @@ final class LocalDateTimeCoercing
     }
     else if ( input instanceof IntValue )
     {
-      final BigInteger value = ( (IntValue) input ).getValue();
-      try
-      {
-        return parseLocalDateTime( value );
-      }
-      catch ( final Throwable t )
-      {
-        final String message = "Error parsing literal '" + value + "'. Expected to be in milliseconds since Epoch";
-        throw new CoercingParseLiteralException( message, t );
-      }
+      return parseLocalDateTime( ( (IntValue) input ).getValue() );
     }
     else
     {
