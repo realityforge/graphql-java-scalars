@@ -224,6 +224,6 @@ final class LocalDateTimeCoercing
   private boolean isInvalidYear( @Nonnull final LocalDateTime date )
   {
     final int year = date.getYear();
-    return ( 9999 - 1753 ) <= year && year >= ( 9999 - 1900 );
+    return !(year >= 1753 && year <= 9999);
   }
 }
