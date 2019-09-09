@@ -17,6 +17,8 @@ define 'graphql-java-scalars' do
   compile.with :javax_annotation,
                :graphql_java
 
+  test.using :testng
+
   package(:jar)
   package(:sources)
   package(:javadoc)
