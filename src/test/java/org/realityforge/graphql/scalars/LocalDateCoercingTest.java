@@ -62,12 +62,14 @@ public class LocalDateCoercingTest
     // Day after the last valid day
     final LocalDate localDate = LocalDate.of( 10000, 1, 1 );
     final long epochSecond = localDate.atTime( 0, 0 ).atZone( ZoneOffset.systemDefault() ).toEpochSecond();
+    final long epochMillis = epochSecond * 1000L;
     final LocalDateCoercing coercing = new LocalDateCoercing();
     final CoercingParseValueException exception =
-      expectThrows( CoercingParseValueException.class, () -> coercing.parseValue( epochSecond * 1000L ) );
+      expectThrows( CoercingParseValueException.class, () -> coercing.parseValue( epochMillis ) );
     assertEquals( exception.getErrorType(), ErrorType.ValidationError );
     assertEquals( exception.getMessage(),
-                  "LocalDate value 253402261200000 must be between January 1, 1753 and December 31, 9999. Received: +10000-01-01" );
+                  "LocalDate value " + epochMillis + " must be between January 1, 1753 and " +
+                  "December 31, 9999. Received: +10000-01-01" );
   }
 
   @Test
@@ -127,13 +129,15 @@ public class LocalDateCoercingTest
     // Day after the last valid day
     final LocalDate localDate = LocalDate.of( 10000, 1, 1 );
     final long epochSecond = localDate.atTime( 0, 0 ).atZone( ZoneOffset.systemDefault() ).toEpochSecond();
+    final long epochMillis = epochSecond * 1000L;
     final LocalDateCoercing coercing = new LocalDateCoercing();
     final CoercingParseLiteralException exception =
       expectThrows( CoercingParseLiteralException.class,
-                    () -> coercing.parseLiteral( new IntValue( BigInteger.valueOf( epochSecond * 1000L ) ) ) );
+                    () -> coercing.parseLiteral( new IntValue( BigInteger.valueOf( epochMillis ) ) ) );
     assertEquals( exception.getErrorType(), ErrorType.ValidationError );
     assertEquals( exception.getMessage(),
-                  "LocalDate literal IntValue{value=253402261200000} must be between January 1, 1753 and December 31, 9999. Received: +10000-01-01" );
+                  "LocalDate literal IntValue{value=" + epochMillis + "} must be between January 1, 1753 " +
+                  "and December 31, 9999. Received: +10000-01-01" );
   }
 
   @Test
