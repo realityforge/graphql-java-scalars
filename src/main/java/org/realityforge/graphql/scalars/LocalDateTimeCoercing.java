@@ -212,13 +212,13 @@ final class LocalDateTimeCoercing
   @Nonnull
   private LocalDateTime parseLocalDateTime( final long epochMilli )
   {
-    return LocalDateTime.from( Instant.ofEpochMilli( epochMilli ) );
+    return LocalDateTime.from( Instant.ofEpochMilli( epochMilli ).atZone( ZoneId.systemDefault() ) );
   }
 
   @Nonnull
   private LocalDateTime parseLocalDateTime( @Nonnull final String value )
   {
-    return LocalDateTime.from( ZonedDateTime.parse( value ).toInstant() );
+    return LocalDateTime.parse( value );
   }
 
   private boolean isInvalidYear( @Nonnull final LocalDateTime date )
