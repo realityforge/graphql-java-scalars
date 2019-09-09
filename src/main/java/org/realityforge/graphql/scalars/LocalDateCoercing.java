@@ -209,6 +209,6 @@ final class LocalDateCoercing
   private static boolean isInvalidYear( @Nonnull final LocalDate date )
   {
     final int year = date.getYear();
-    return !(year >= 1753 && year <= 9999);
+    return !( year >= 1753 && year <= 9999 );
   }
 }
