@@ -1,6 +1,6 @@
 # graphql-java-scalars: graphql-java scalar implementations
 
-[![Build Status](https://api.travis-ci.com/realityforge/graphql-java-scalars.svg?branch=master)](http://travis-ci.org/realityforge/graphql-java-scalars)
+[![Build Status](https://api.travis-ci.com/realityforge/graphql-java-scalars.svg?branch=master)](http://travis-ci.com/realityforge/graphql-java-scalars)
 [<img src="https://img.shields.io/maven-central/v/org.realityforge.graphql.scalars/graphql-java-scalars.svg?label=latest%20release"/>](https://search.maven.org/search?q=g:org.realityforge.graphq.scalarsl%20a:graphql-java-scalars)
 
 ## What is graphql-java-scalars?
