@@ -12,7 +12,7 @@ define 'graphql-java-scalars' do
 
   pom.add_apache_v2_license
   pom.add_github_project('realityforge/graphql-java-scalars')
-  pom.add_developer('realityforge', 'Peter Donald', 'peter@realityforge.org', ['Developer'])
+  pom.add_developer('realityforge', 'Peter Donald')
 
   compile.with :javax_annotation,
                :graphql_java
