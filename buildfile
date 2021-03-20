@@ -1,6 +1,8 @@
 require 'buildr/git_auto_version'
 require 'buildr/gpg'
 
+Buildr::MavenCentral.define_publish_tasks(:profile_name => 'org.realityforge', :username => 'realityforge')
+
 desc 'graphql-java scalar implementations'
 define 'graphql-java-scalars' do
   project.group = 'org.realityforge.graphql.scalars'
