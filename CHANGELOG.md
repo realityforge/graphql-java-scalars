@@ -2,6 +2,7 @@
 
 ### Unreleased
 
+* Update the `org.realityforge.javax.annotation` artifact to version `1.1.1`.
 * Upgrade the `au.com.stocksoftware.idea.codestyle` artifact to version `1.17`.
 * Upgrade the `org.realityforge.javax.annotation` artifact to version `1.0.1`.
 
